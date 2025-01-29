@@ -80,8 +80,8 @@ When clicking on one of the `Hotels`, `Cities` or `Countries` links, the applica
 
 ### Limitations
 
-Given the time constraints, we do not expect a fully production-ready solution. We're primarily interested in the approach and the overall quality of the solution. 
-Feel free to modify the current codebase as needed, including adding or removing dependencies. 
+Given the time constraints, we do not expect a fully production-ready solution. We're primarily interested in the approach and the overall quality of the solution.
+Feel free to modify the current codebase as needed, including adding or removing dependencies.
 For larger or more time-intensive changes, you're welcome to outline your ideas in the write-up section below and discuss them further during the call.
 
 <img src="./assets/search-example.png" width="400px" />
@@ -98,21 +98,21 @@ _When all the behaviour is implemented, feel free to add some observations or co
 
 ```json
 [
-  {
-    "chain_name": "Samed Resorts Group",
-    "hotel_name": "Sai Kaew Beach Resort",
-    "addressline1": "8/1 Moo 4 Tumbon Phe Muang",
-    "addressline2": "",
-    "zipcode": "21160",
-    "city": "Koh Samet",
-    "state": "Rayong",
-    "country": "Thailand",
-    "countryisocode": "TH",
-    "star_rating": 4
-  },
-  {
-    /* ... */
-  }
+    {
+        "chain_name": "Samed Resorts Group",
+        "hotel_name": "Sai Kaew Beach Resort",
+        "addressline1": "8/1 Moo 4 Tumbon Phe Muang",
+        "addressline2": "",
+        "zipcode": "21160",
+        "city": "Koh Samet",
+        "state": "Rayong",
+        "country": "Thailand",
+        "countryisocode": "TH",
+        "star_rating": 4
+    },
+    {
+        /* ... */
+    }
 ]
 ```
 
@@ -120,10 +120,10 @@ _When all the behaviour is implemented, feel free to add some observations or co
 
 ```json
 [
-  { "name": "Auckland" },
-  {
-    /* ... */
-  }
+    { "name": "Auckland" },
+    {
+        /* ... */
+    }
 ]
 ```
 
@@ -131,12 +131,12 @@ _When all the behaviour is implemented, feel free to add some observations or co
 
 ```json
 [
-  {
-    "country": "Belgium",
-    "countryisocode": "BE"
-  },
-  {
-    /* ... */
-  }
+    {
+        "country": "Belgium",
+        "countryisocode": "BE"
+    },
+    {
+        /* ... */
+    }
 ]
 ```
