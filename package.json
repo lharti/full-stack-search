@@ -1,19 +1,21 @@
 {
-  "name": "full-stack-search",
-  "private": true,
-  "version": "1.0.2",
-  "workspaces": [
-    "apps/*"
-  ],
-  "scripts": {
-    "start": "concurrently npm:start:*",
-    "start:api": "npm run -w api dev",
-    "start:client": "npm run -w client start",
-    "dev": "npm start",
-    "test": "npm run -w client test",
-    "api-no-watch": "npm run -w api dev:no-watch"
-  },
-  "devDependencies": {
-    "concurrently": "^9.1.2"
-  }
+    "name": "full-stack-search",
+    "private": true,
+    "version": "1.0.2",
+    "workspaces": [
+        "apps/*"
+    ],
+    "scripts": {
+        "start": "concurrently npm:start:*",
+        "start:api": "npm run -w api dev",
+        "start:client": "npm run -w client start",
+        "dev": "npm start",
+        "test": "npm run -w client test",
+        "api-no-watch": "npm run -w api dev:no-watch",
+        "format": "prettier --write ."
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2",
+        "prettier": "^3.4.2"
+    }
 }
