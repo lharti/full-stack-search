@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.2",
   "workspaces": [
-    "packages/*"
+    "apps/*"
   ],
   "scripts": {
     "start": "concurrently npm:start:*",
