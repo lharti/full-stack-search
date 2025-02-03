@@ -1,4 +1,4 @@
-export const cities = [
+export const cities: { name: string }[] = [
     { name: 'Auckland' },
     { name: 'Bordeaux' },
     { name: 'Brussels' },
