@@ -1,0 +1,540 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HotelModel should have the right schema: HotelSchema 1`] = `
+Schema {
+  "$globalPluginsApplied": true,
+  "$id": 2,
+  "_indexes": [],
+  "_searchIndexes": [],
+  "_userProvidedOptions": {},
+  "aliases": {},
+  "callQueue": [],
+  "childSchemas": [],
+  "inherits": {},
+  "mapPaths": [],
+  "methodOptions": {
+    "typegooseName": undefined,
+  },
+  "methods": {
+    "typegooseName": [Function],
+  },
+  "nested": {},
+  "obj": {
+    "addressLine1": {
+      "required": true,
+      "type": [Function],
+    },
+    "addressLine2": {
+      "type": [Function],
+    },
+    "chainName": {
+      "type": [Function],
+    },
+    "city": {
+      "required": true,
+      "type": [Function],
+    },
+    "country": {
+      "required": true,
+      "type": [Function],
+    },
+    "countryIsoCode": {
+      "maxlength": 3,
+      "minlength": 2,
+      "required": true,
+      "type": [Function],
+      "uppercase": true,
+    },
+    "hotelName": {
+      "index": true,
+      "required": true,
+      "type": [Function],
+    },
+    "starRating": {
+      "max": 5,
+      "min": 1,
+      "required": true,
+      "type": [Function],
+    },
+    "state": {
+      "type": [Function],
+    },
+    "zipCode": {
+      "type": [Function],
+    },
+  },
+  "options": {
+    "_id": true,
+    "autoIndex": null,
+    "bufferCommands": true,
+    "capped": false,
+    "discriminatorKey": "__t",
+    "id": true,
+    "minimize": true,
+    "optimisticConcurrency": false,
+    "pluralization": true,
+    "read": null,
+    "shardKey": null,
+    "strict": true,
+    "strictQuery": false,
+    "typeKey": "type",
+    "validateBeforeSave": true,
+    "validateModifiedOnly": false,
+    "versionKey": "__v",
+  },
+  "paths": {
+    "__v": SchemaNumber {
+      "_index": null,
+      "_presplitPath": [
+        "__v",
+      ],
+      "getters": [],
+      "instance": "Number",
+      "options": SchemaNumberOptions {
+        "type": [Function],
+      },
+      "path": "__v",
+      "setters": [],
+      "validators": [],
+      Symbol(mongoose#schemaType): true,
+    },
+    "_id": SchemaObjectId {
+      "_index": null,
+      "_presplitPath": [
+        "_id",
+      ],
+      "defaultValue": [Function],
+      "getters": [],
+      "instance": "ObjectId",
+      "options": SchemaObjectIdOptions {
+        "auto": true,
+        "type": "ObjectId",
+      },
+      "path": "_id",
+      "setters": [
+        [Function],
+      ],
+      "validators": [],
+      Symbol(mongoose#schemaType): true,
+    },
+    "addressLine1": SchemaString {
+      "_index": null,
+      "_presplitPath": [
+        "addressLine1",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "isRequired": true,
+      "options": SchemaStringOptions {
+        "required": true,
+        "type": [Function],
+      },
+      "originalRequiredValue": true,
+      "path": "addressLine1",
+      "regExp": null,
+      "requiredValidator": [Function],
+      "setters": [],
+      "validators": [
+        {
+          "message": "Path \`{PATH}\` is required.",
+          "type": "required",
+          "validator": [Function],
+        },
+      ],
+      Symbol(mongoose#schemaType): true,
+    },
+    "addressLine2": SchemaString {
+      "_index": null,
+      "_presplitPath": [
+        "addressLine2",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "options": SchemaStringOptions {
+        "type": [Function],
+      },
+      "path": "addressLine2",
+      "regExp": null,
+      "setters": [],
+      "validators": [],
+      Symbol(mongoose#schemaType): true,
+    },
+    "chainName": SchemaString {
+      "_index": null,
+      "_presplitPath": [
+        "chainName",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "options": SchemaStringOptions {
+        "type": [Function],
+      },
+      "path": "chainName",
+      "regExp": null,
+      "setters": [],
+      "validators": [],
+      Symbol(mongoose#schemaType): true,
+    },
+    "city": SchemaString {
+      "_index": null,
+      "_presplitPath": [
+        "city",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "isRequired": true,
+      "options": SchemaStringOptions {
+        "required": true,
+        "type": [Function],
+      },
+      "originalRequiredValue": true,
+      "path": "city",
+      "regExp": null,
+      "requiredValidator": [Function],
+      "setters": [],
+      "validators": [
+        {
+          "message": "Path \`{PATH}\` is required.",
+          "type": "required",
+          "validator": [Function],
+        },
+      ],
+      Symbol(mongoose#schemaType): true,
+    },
+    "country": SchemaString {
+      "_index": null,
+      "_presplitPath": [
+        "country",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "isRequired": true,
+      "options": SchemaStringOptions {
+        "required": true,
+        "type": [Function],
+      },
+      "originalRequiredValue": true,
+      "path": "country",
+      "regExp": null,
+      "requiredValidator": [Function],
+      "setters": [],
+      "validators": [
+        {
+          "message": "Path \`{PATH}\` is required.",
+          "type": "required",
+          "validator": [Function],
+        },
+      ],
+      Symbol(mongoose#schemaType): true,
+    },
+    "countryIsoCode": SchemaString {
+      "_index": null,
+      "_presplitPath": [
+        "countryIsoCode",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "isRequired": true,
+      "maxlengthValidator": [Function],
+      "minlengthValidator": [Function],
+      "options": SchemaStringOptions {
+        "maxlength": 3,
+        "minlength": 2,
+        "required": true,
+        "type": [Function],
+        "uppercase": true,
+      },
+      "originalRequiredValue": true,
+      "path": "countryIsoCode",
+      "regExp": null,
+      "requiredValidator": [Function],
+      "setters": [
+        [Function],
+      ],
+      "validators": [
+        {
+          "message": "Path \`{PATH}\` is required.",
+          "type": "required",
+          "validator": [Function],
+        },
+        {
+          "message": "Path \`{PATH}\` (\`{VALUE}\`) is shorter than the minimum allowed length (2).",
+          "minlength": 2,
+          "type": "minlength",
+          "validator": [Function],
+        },
+        {
+          "maxlength": 3,
+          "message": "Path \`{PATH}\` (\`{VALUE}\`) is longer than the maximum allowed length (3).",
+          "type": "maxlength",
+          "validator": [Function],
+        },
+      ],
+      Symbol(mongoose#schemaType): true,
+    },
+    "hotelName": SchemaString {
+      "_index": true,
+      "_presplitPath": [
+        "hotelName",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "isRequired": true,
+      "options": SchemaStringOptions {
+        "index": true,
+        "required": true,
+        "type": [Function],
+      },
+      "originalRequiredValue": true,
+      "path": "hotelName",
+      "regExp": null,
+      "requiredValidator": [Function],
+      "setters": [],
+      "validators": [
+        {
+          "message": "Path \`{PATH}\` is required.",
+          "type": "required",
+          "validator": [Function],
+        },
+      ],
+      Symbol(mongoose#schemaType): true,
+    },
+    "starRating": SchemaNumber {
+      "_index": null,
+      "_presplitPath": [
+        "starRating",
+      ],
+      "getters": [],
+      "instance": "Number",
+      "isRequired": true,
+      "maxValidator": [Function],
+      "minValidator": [Function],
+      "options": SchemaNumberOptions {
+        "max": 5,
+        "min": 1,
+        "required": true,
+        "type": [Function],
+      },
+      "originalRequiredValue": true,
+      "path": "starRating",
+      "requiredValidator": [Function],
+      "setters": [],
+      "validators": [
+        {
+          "message": "Path \`{PATH}\` is required.",
+          "type": "required",
+          "validator": [Function],
+        },
+        {
+          "message": "Path \`{PATH}\` ({VALUE}) is less than minimum allowed value (1).",
+          "min": 1,
+          "type": "min",
+          "validator": [Function],
+        },
+        {
+          "max": 5,
+          "message": "Path \`{PATH}\` ({VALUE}) is more than maximum allowed value (5).",
+          "type": "max",
+          "validator": [Function],
+        },
+      ],
+      Symbol(mongoose#schemaType): true,
+    },
+    "state": SchemaString {
+      "_index": null,
+      "_presplitPath": [
+        "state",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "options": SchemaStringOptions {
+        "type": [Function],
+      },
+      "path": "state",
+      "regExp": null,
+      "setters": [],
+      "validators": [],
+      Symbol(mongoose#schemaType): true,
+    },
+    "zipCode": SchemaString {
+      "_index": null,
+      "_presplitPath": [
+        "zipCode",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "options": SchemaStringOptions {
+        "type": [Function],
+      },
+      "path": "zipCode",
+      "regExp": null,
+      "setters": [],
+      "validators": [],
+      Symbol(mongoose#schemaType): true,
+    },
+  },
+  "plugins": [
+    {
+      "fn": [Function],
+      "opts": {
+        "deduplicate": true,
+      },
+    },
+    {
+      "fn": [Function],
+      "opts": {
+        "deduplicate": true,
+      },
+    },
+    {
+      "fn": [Function],
+      "opts": {
+        "deduplicate": true,
+      },
+    },
+    {
+      "fn": [Function],
+      "opts": {
+        "deduplicate": true,
+      },
+    },
+    {
+      "fn": [Function],
+      "opts": {
+        "deduplicate": true,
+      },
+    },
+  ],
+  "query": {},
+  "s": {
+    "hooks": Kareem {
+      "_posts": Map {
+        "save" => [
+          {
+            "fn": [Function],
+          },
+          {
+            "fn": [Function],
+          },
+          {
+            "fn": [Function],
+          },
+          {
+            "fn": [Function],
+          },
+        ],
+        "init" => [
+          {
+            "fn": [Function],
+          },
+        ],
+      },
+      "_pres": Map {
+        "save" => [
+          {
+            "fn": [Function],
+            "isAsync": false,
+          },
+          {
+            "fn": [Function],
+            "isAsync": false,
+          },
+          {
+            "fn": [Function],
+            "isAsync": false,
+          },
+          {
+            "fn": [Function],
+            "isAsync": false,
+          },
+        ],
+        "remove" => [
+          {
+            "fn": [Function],
+            "isAsync": false,
+          },
+        ],
+      },
+    },
+  },
+  "singleNestedPaths": {},
+  "statics": {},
+  "subpaths": {},
+  "tree": {
+    "__v": [Function],
+    "_id": {
+      "auto": true,
+      "type": "ObjectId",
+    },
+    "addressLine1": {
+      "required": true,
+      "type": [Function],
+    },
+    "addressLine2": {
+      "type": [Function],
+    },
+    "chainName": {
+      "type": [Function],
+    },
+    "city": {
+      "required": true,
+      "type": [Function],
+    },
+    "country": {
+      "required": true,
+      "type": [Function],
+    },
+    "countryIsoCode": {
+      "maxlength": 3,
+      "minlength": 2,
+      "required": true,
+      "type": [Function],
+      "uppercase": true,
+    },
+    "hotelName": {
+      "index": true,
+      "required": true,
+      "type": [Function],
+    },
+    "id": VirtualType {
+      "getters": [
+        [Function],
+      ],
+      "options": {},
+      "path": "id",
+      "setters": [],
+    },
+    "starRating": {
+      "max": 5,
+      "min": 1,
+      "required": true,
+      "type": [Function],
+    },
+    "state": {
+      "type": [Function],
+    },
+    "zipCode": {
+      "type": [Function],
+    },
+  },
+  "virtuals": {
+    "id": VirtualType {
+      "getters": [
+        [Function],
+      ],
+      "options": {},
+      "path": "id",
+      "setters": [],
+    },
+  },
+}
+`;
