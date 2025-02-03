@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountryModel should have the right schema: CountrySchema 1`] = `
+Schema {
+  "$globalPluginsApplied": true,
+  "$id": 1,
+  "_indexes": [],
+  "_searchIndexes": [],
+  "_userProvidedOptions": {},
+  "aliases": {},
+  "callQueue": [],
+  "childSchemas": [],
+  "inherits": {},
+  "mapPaths": [],
+  "methodOptions": {
+    "typegooseName": undefined,
+  },
+  "methods": {
+    "typegooseName": [Function],
+  },
+  "nested": {},
+  "obj": {
+    "isoCode": {
+      "required": true,
+      "type": [Function],
+    },
+    "name": {
+      "index": true,
+      "required": true,
+      "type": [Function],
+    },
+  },
+  "options": {
+    "_id": true,
+    "autoIndex": null,
+    "bufferCommands": true,
+    "capped": false,
+    "discriminatorKey": "__t",
+    "id": true,
+    "minimize": true,
+    "optimisticConcurrency": false,
+    "pluralization": true,
+    "read": null,
+    "shardKey": null,
+    "strict": true,
+    "strictQuery": false,
+    "typeKey": "type",
+    "validateBeforeSave": true,
+    "validateModifiedOnly": false,
+    "versionKey": "__v",
+  },
+  "paths": {
+    "__v": SchemaNumber {
+      "_index": null,
+      "_presplitPath": [
+        "__v",
+      ],
+      "getters": [],
+      "instance": "Number",
+      "options": SchemaNumberOptions {
+        "type": [Function],
+      },
+      "path": "__v",
+      "setters": [],
+      "validators": [],
+      Symbol(mongoose#schemaType): true,
+    },
+    "_id": SchemaObjectId {
+      "_index": null,
+      "_presplitPath": [
+        "_id",
+      ],
+      "defaultValue": [Function],
+      "getters": [],
+      "instance": "ObjectId",
+      "options": SchemaObjectIdOptions {
+        "auto": true,
+        "type": "ObjectId",
+      },
+      "path": "_id",
+      "setters": [
+        [Function],
+      ],
+      "validators": [],
+      Symbol(mongoose#schemaType): true,
+    },
+    "isoCode": SchemaString {
+      "_index": null,
+      "_presplitPath": [
+        "isoCode",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "isRequired": true,
+      "options": SchemaStringOptions {
+        "required": true,
+        "type": [Function],
+      },
+      "originalRequiredValue": true,
+      "path": "isoCode",
+      "regExp": null,
+      "requiredValidator": [Function],
+      "setters": [],
+      "validators": [
+        {
+          "message": "Path \`{PATH}\` is required.",
+          "type": "required",
+          "validator": [Function],
+        },
+      ],
+      Symbol(mongoose#schemaType): true,
+    },
+    "name": SchemaString {
+      "_index": true,
+      "_presplitPath": [
+        "name",
+      ],
+      "enumValues": [],
+      "getters": [],
+      "instance": "String",
+      "isRequired": true,
+      "options": SchemaStringOptions {
+        "index": true,
+        "required": true,
+        "type": [Function],
+      },
+      "originalRequiredValue": true,
+      "path": "name",
+      "regExp": null,
+      "requiredValidator": [Function],
+      "setters": [],
+      "validators": [
+        {
+          "message": "Path \`{PATH}\` is required.",
+          "type": "required",
+          "validator": [Function],
+        },
+      ],
+      Symbol(mongoose#schemaType): true,
+    },
+  },
+  "plugins": [
+    {
+      "fn": [Function],
+      "opts": {
+        "deduplicate": true,
+      },
+    },
+    {
+      "fn": [Function],
+      "opts": {
+        "deduplicate": true,
+      },
+    },
+    {
+      "fn": [Function],
+      "opts": {
+        "deduplicate": true,
+      },
+    },
+    {
+      "fn": [Function],
+      "opts": {
+        "deduplicate": true,
+      },
+    },
+    {
+      "fn": [Function],
+      "opts": {
+        "deduplicate": true,
+      },
+    },
+  ],
+  "query": {},
+  "s": {
+    "hooks": Kareem {
+      "_posts": Map {
+        "save" => [
+          {
+            "fn": [Function],
+          },
+          {
+            "fn": [Function],
+          },
+          {
+            "fn": [Function],
+          },
+        ],
+        "init" => [
+          {
+            "fn": [Function],
+          },
+        ],
+      },
+      "_pres": Map {
+        "save" => [
+          {
+            "fn": [Function],
+            "isAsync": false,
+          },
+          {
+            "fn": [Function],
+            "isAsync": false,
+          },
+          {
+            "fn": [Function],
+            "isAsync": false,
+          },
+          {
+            "fn": [Function],
+            "isAsync": false,
+          },
+        ],
+        "remove" => [
+          {
+            "fn": [Function],
+            "isAsync": false,
+          },
+        ],
+      },
+    },
+  },
+  "singleNestedPaths": {},
+  "statics": {},
+  "subpaths": {},
+  "tree": {
+    "__v": [Function],
+    "_id": {
+      "auto": true,
+      "type": "ObjectId",
+    },
+    "id": VirtualType {
+      "getters": [
+        [Function],
+      ],
+      "options": {},
+      "path": "id",
+      "setters": [],
+    },
+    "isoCode": {
+      "required": true,
+      "type": [Function],
+    },
+    "name": {
+      "index": true,
+      "required": true,
+      "type": [Function],
+    },
+  },
+  "virtuals": {
+    "id": VirtualType {
+      "getters": [
+        [Function],
+      ],
+      "options": {},
+      "path": "id",
+      "setters": [],
+    },
+  },
+}
+`;
