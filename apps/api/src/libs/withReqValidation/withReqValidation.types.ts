@@ -18,7 +18,7 @@ export type RequestHandler<RequestSchema extends RequestValidationSchema> = (
     req: InferRequestFromSchema<RequestSchema>,
     res: Response,
     next: NextFunction,
-) => void
+) => Promise<void> | void
 
 export type InferRequestFromSchema<
     RequestSchema extends RequestValidationSchema,

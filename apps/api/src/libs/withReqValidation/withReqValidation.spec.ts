@@ -80,6 +80,30 @@ describe('withReqValidation', () => {
 
         expect(handler).toHaveBeenCalledExactlyOnceWith(parsedReq, res, next)
     })
+
+    it('should return 505 response if handler throws an error', async () => {
+        expect.assertions(2)
+
+        const { reqSchema, req, res, next } = setupMocks()
+
+        const handler = jest
+            .fn()
+            .mockRejectedValueOnce(new Error('Something went wrong'))
+
+        const handlerWithValidation = withReqValidation(reqSchema, handler)
+
+        // @ts-expect-error: just a mock, no need to be accurate
+        validateRequestMock.mockReturnValue([{}, undefined])
+
+        // @ts-expect-error: just a mock, no need to be accurate
+        await handlerWithValidation(req, res, next)
+
+        expect(res.status).toHaveBeenCalledExactlyOnceWith(500)
+
+        expect(res.json).toHaveBeenCalledExactlyOnceWith({
+            message: 'Internal server error',
+        })
+    })
 })
 
 const setupMocks = () => {

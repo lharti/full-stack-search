@@ -19,7 +19,7 @@ export const withReqValidation = <
     reqSchema: RequestSchema,
     handler: RequestHandler<RequestSchema>,
 ): Handler => {
-    const handlerWithValidation = (
+    const handlerWithValidation = async (
         req: Request,
         res: Response,
         next: NextFunction,
@@ -32,7 +32,15 @@ export const withReqValidation = <
             return
         }
 
-        handler(parsedReq, res, next)
+        try {
+            return await handler(parsedReq, res, next)
+        } catch (error) {
+            console.error(error)
+
+            res.status(ResponseStatusCode.INTERNAL_SERVER_ERROR).json({
+                message: 'Internal server error',
+            })
+        }
     }
 
     return handlerWithValidation
