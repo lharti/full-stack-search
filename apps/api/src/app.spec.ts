@@ -32,6 +32,10 @@ jest.mock('@/routes/search', () => ({
 jest.mock('@/routes/hotels', () => ({
     hotelsRouter: function hotelsRouter() {},
 }))
+
+jest.mock('@/routes/cities', () => ({
+    citiesRouter: function citiesRouter() {},
+}))
 // Mocks end
 
 describe('app', () => {
@@ -79,6 +83,17 @@ describe('app', () => {
             const { hotelsRouter } = await import('@/routes/hotels')
 
             expect(app.use).toHaveBeenCalledWith('/hotels', hotelsRouter)
+        })
+    })
+
+    it('should mount cities router', () => {
+        expect.assertions(1)
+
+        jest.isolateModulesAsync(async () => {
+            const { app } = await import('@/app')
+            const { citiesRouter } = await import('@/routes/cities')
+
+            expect(app.use).toHaveBeenCalledWith('/cities', citiesRouter)
         })
     })
 })
