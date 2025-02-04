@@ -26,7 +26,11 @@ jest.mock('cors', () => {
 })
 
 jest.mock('@/routes/search', () => ({
-    searchRouter: jest.fn(),
+    searchRouter: function searchRouter() {},
+}))
+
+jest.mock('@/routes/hotels', () => ({
+    hotelsRouter: function hotelsRouter() {},
 }))
 // Mocks end
 
@@ -64,6 +68,17 @@ describe('app', () => {
             const { app } = await import('@/app')
 
             expect(app.use).toHaveBeenCalledWith('/search', searchRouter)
+        })
+    })
+
+    it('should mount hotels router', () => {
+        expect.assertions(1)
+
+        jest.isolateModulesAsync(async () => {
+            const { app } = await import('@/app')
+            const { hotelsRouter } = await import('@/routes/hotels')
+
+            expect(app.use).toHaveBeenCalledWith('/hotels', hotelsRouter)
         })
     })
 })
