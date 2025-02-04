@@ -1,5 +1,7 @@
 import { ResponseStatusCode } from '@/common/constants'
 import { withReqValidation } from '@/libs/withReqValidation'
+import { CityModel } from '@/models/city'
+import { CountryModel } from '@/models/country'
 import { HotelSearchIndexModel } from '@/models/hotelSearchIndex'
 import { z } from 'zod'
 
@@ -17,10 +19,25 @@ export const search = withReqValidation(
     searchRequestValidation,
 
     async (req, res) => {
-        const { q } = req.query
+        const { q: searchQuery } = req.query
 
-        const result = await HotelSearchIndexModel.findHotelsMatching(q)
+        const hotelsResult =
+            await HotelSearchIndexModel.findHotelsMatching(searchQuery)
 
-        res.status(ResponseStatusCode.OK).json(result)
+        const nameMatchingSearchQuery = {
+            name: {
+                $regex: new RegExp(searchQuery, 'i'),
+            },
+        }
+
+        const countriesResult = await CountryModel.find(nameMatchingSearchQuery)
+
+        const citiesResult = await CityModel.find(nameMatchingSearchQuery)
+
+        res.status(ResponseStatusCode.OK).json({
+            hotels: hotelsResult,
+            countries: countriesResult,
+            cities: citiesResult,
+        })
     },
 )

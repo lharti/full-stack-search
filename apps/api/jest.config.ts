@@ -18,7 +18,7 @@ const config: Config = {
         ],
     },
 
-    collectCoverageFrom: ['src/**/*.(t|j)s'],
+    collectCoverageFrom: ['src/**/*.(t|j)s', '!src/server.ts'],
 
     coverageDirectory: '<rootDir>/coverage',
 
