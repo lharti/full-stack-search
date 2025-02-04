@@ -12,6 +12,7 @@
         "skipLibCheck": true,
         "baseUrl": ".",
         "outDir": "./dist",
+        "resolveJsonModule": true,
 
         "paths": {
             "@/*": ["src/*"]

@@ -7,7 +7,8 @@
         "dev": "tsx watch --clear-screen=false ./src/server.ts ",
         "dev:api": "npm run dev",
         "dev:no-watch": "tsx .",
-        "build": "tsc",
+        "build": "tsup",
+        "start": "node dist/server.js",
         "build:api": "npm run build",
         "lint": "eslint ."
     },
@@ -40,8 +41,20 @@
         "prettier-2": "npm:prettier@^2.8.8",
         "ts-jest": "^29.2.5",
         "ts-node": "^10.9.2",
+        "tsup": "^8.3.6",
         "tsx": "^4.19.2",
         "typescript": "^5.7.3",
         "typescript-eslint": "^8.22.0"
+    },
+    "tsup": {
+        "entry": [
+            "src",
+            "!src/**/*.spec.*",
+            "!src/**/*.test.*"
+        ],
+        "splitting": false,
+        "sourcemap": true,
+        "clean": true,
+        "format": "esm"
     }
 }
