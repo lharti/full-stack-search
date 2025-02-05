@@ -1,5 +1,5 @@
 import { SearchBarResult } from '@/components/SearchBarResult'
-import { DropdownMenu } from '@/components/ui/DropdownMenu/DropdownMenu'
+import { DropdownMenu } from '@/components/ui/DropdownMenu'
 import { SearchInput } from '@/components/ui/SearchInput'
 import { useSearchQuery } from '@/hooks/useSearchQuery'
 import { useState } from 'react'

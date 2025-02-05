@@ -1,5 +1,5 @@
 import { NotFoundCard } from '@/components/NotFoundCard'
-import { useGetHotelQuery } from '@/hooks/useFetchHotel'
+import { useGetHotelQuery } from '@/hooks/useGetHotelQuery'
 import { Link, useParams } from 'react-router'
 
 export const HotelPage: React.FC = () => {
