@@ -23,10 +23,12 @@ describe('HotelModel', () => {
                 "type": [Function],
               },
               "city": {
+                "index": true,
                 "required": true,
                 "type": [Function],
               },
               "country": {
+                "index": true,
                 "required": true,
                 "type": [Function],
               },
@@ -49,6 +51,7 @@ describe('HotelModel', () => {
                 "type": [Function],
               },
               "state": {
+                "index": true,
                 "type": [Function],
               },
               "zipCode": {

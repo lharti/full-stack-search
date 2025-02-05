@@ -1,10 +1,6 @@
-import { getModelForClass, post, prop } from '@typegoose/typegoose'
+import { getModelForClass, prop } from '@typegoose/typegoose'
 import { ObjectId } from 'mongoose'
-import { HotelSearchIndexModel } from '../hotelSearchIndex'
 
-@post<Hotel>('save', doc => {
-    HotelSearchIndexModel.createSearchIndex(doc)
-})
 export class Hotel {
     public _id!: ObjectId
 
@@ -40,17 +36,23 @@ export class Hotel {
     @prop({
         type: String,
         required: true,
+
+        index: true,
     })
     public city!: string
 
     @prop({
         type: String,
+
+        index: true,
     })
     public state!: string
 
     @prop({
         type: String,
         required: true,
+
+        index: true,
     })
     public country!: string
 

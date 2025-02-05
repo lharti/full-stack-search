@@ -1,13 +1,14 @@
 import { CityModel } from '@/models/city'
 import { CountryModel } from '@/models/country'
-import { HotelSearchIndexModel } from '@/models/hotelSearchIndex'
+import { HotelModel } from '@/models/hotel'
 import { getMockReq, getMockRes } from '@jest-mock/express'
 import { search } from './search.controller'
-jest.mock('@/models/hotelSearchIndex')
+
+jest.mock('@/models/hotel')
 jest.mock('@/models/city')
 jest.mock('@/models/country')
 
-const HotelSearchIndexModelMock = jest.mocked(HotelSearchIndexModel)
+const HotelModelMock = jest.mocked(HotelModel)
 const CityModelMock = jest.mocked(CityModel)
 const CountryModelMock = jest.mocked(CountryModel)
 
@@ -22,9 +23,32 @@ describe('search', () => {
         // @ts-expect-error: no need to provide accurate req object
         await search(req, res, next)
 
-        expect(
-            HotelSearchIndexModelMock.findHotelsMatching,
-        ).toHaveBeenCalledExactlyOnceWith('search query')
+        const queryRegex = new RegExp('search query', 'i')
+
+        expect(HotelModelMock.find).toHaveBeenCalledExactlyOnceWith({
+            $or: [
+                {
+                    hotelName: {
+                        $regex: queryRegex,
+                    },
+                },
+                {
+                    city: {
+                        $regex: queryRegex,
+                    },
+                },
+                {
+                    country: {
+                        $regex: queryRegex,
+                    },
+                },
+                {
+                    state: {
+                        $regex: queryRegex,
+                    },
+                },
+            ],
+        })
     })
 
     it('should find cities with names matching search query', async () => {
@@ -94,9 +118,7 @@ describe('search', () => {
             ],
         }
 
-        HotelSearchIndexModelMock.findHotelsMatching.mockResolvedValueOnce(
-            searchResult.hotels,
-        )
+        HotelModelMock.find.mockResolvedValueOnce(searchResult.hotels)
 
         CityModelMock.find.mockResolvedValueOnce(searchResult.cities)
 
@@ -145,7 +167,7 @@ describe('search', () => {
 
         req.query.q = 'search query'
 
-        HotelSearchIndexModelMock.findHotelsMatching.mockRejectedValueOnce(
+        HotelModelMock.find.mockRejectedValueOnce(
             new Error('Something went wrong'),
         )
         // @ts-expect-error: no need to provide accurate req object

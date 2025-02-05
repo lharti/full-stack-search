@@ -13,7 +13,7 @@ export const populateDatabase = async () => {
 
     const dbConnection = await connectToDatabase(process.env.DATABASE_URI)
 
-    await HotelModel.bulkSave(hotels.map(hotel => new HotelModel(hotel)))
+    await HotelModel.insertMany(hotels)
 
     await CityModel.insertMany(cities)
 
