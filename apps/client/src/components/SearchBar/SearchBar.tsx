@@ -8,7 +8,7 @@ export const SearchBar: React.FC = () => {
     const [searchValue, setSearchValue] = useState('')
     const [showClearInputButton, setShowClearInputButton] = useState(false)
 
-    const { data } = useSearchQuery(searchValue)
+    const { data, isSuccess } = useSearchQuery(searchValue)
 
     const handleSearchInputChange = (newValue: string) => {
         setSearchValue(newValue)
@@ -30,7 +30,7 @@ export const SearchBar: React.FC = () => {
                 showClearInputButton={showClearInputButton}
             />
 
-            {data?.hotels && (
+            {isSuccess && (
                 <DropdownMenu>
                     <SearchBarResult searchResult={data} />
                 </DropdownMenu>

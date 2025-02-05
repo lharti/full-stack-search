@@ -1,25 +1,11 @@
-import { CitiesList } from '@/components/SearchBarResult/CitiesList'
-import { CountriesList } from '@/components/SearchBarResult/CountriesList'
-import { HotelsList } from '@/components/SearchBarResult/HotelsList/HotelsList'
 import { useMemo } from 'react'
+import { CitiesList } from './CitiesList'
+import { CountriesList } from './CountriesList'
+import { HotelsList } from './HotelsList'
+import { SearchResult } from '@/types'
 
 export interface SearchBarResultProps {
-    searchResult: {
-        hotels: {
-            hotelName: string
-            hotelId: string
-        }[]
-
-        cities: {
-            _id: string
-            name: string
-        }[]
-
-        countries: {
-            _id: string
-            name: string
-        }[]
-    }
+    searchResult: SearchResult
 }
 
 export const SearchBarResult: React.FC<SearchBarResultProps> = ({

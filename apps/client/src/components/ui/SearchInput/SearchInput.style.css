@@ -23,13 +23,13 @@
     padding-left: 10px;
 }
 
-.form-input {
+.form-control.form-input {
     height: 55px;
     text-indent: 33px;
     border-radius: 10px;
 }
 
-.form-input:focus {
+.form-control.form-input:focus {
     box-shadow: none;
     border: none;
 }
