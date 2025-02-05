@@ -34,6 +34,10 @@ describe('<AppRouter />', () => {
               "element": <CityPage />,
               "path": "/cities/:cityId",
             },
+            {
+              "element": <CountryPage />,
+              "path": "/countries/:countryId",
+            },
           ]
         `)
     })

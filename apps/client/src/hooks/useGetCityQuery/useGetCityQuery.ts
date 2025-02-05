@@ -18,7 +18,7 @@ const fetchCity = async (hotelId: string) => {
     const response = await apiClient.get(`/cities/${hotelId}`)
 
     if (!response.ok) {
-        throw new Error('An error occurred while fetching the hotel')
+        throw new Error('An error occurred while fetching the city')
     }
 
     return response.json() as Promise<City>

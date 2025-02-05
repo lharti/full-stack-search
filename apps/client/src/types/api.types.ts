@@ -18,6 +18,7 @@ export type City = {
 export type Country = {
     _id: string
     name: string
+    isoCode: string
 }
 
 export type Hotel = {
