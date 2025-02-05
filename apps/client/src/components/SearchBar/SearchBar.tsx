@@ -12,11 +12,13 @@ export const SearchBar: React.FC = () => {
 
     const handleSearchInputChange = (newValue: string) => {
         setSearchValue(newValue)
+
         setShowClearInputButton(newValue.length > 0)
     }
 
     const handleClearInputButtonClick = () => {
         setSearchValue('')
+
         setShowClearInputButton(false)
     }
 
