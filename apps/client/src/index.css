@@ -47,7 +47,7 @@ body {
     margin: 0.5rem;
 }
 
-.search-dropdown-menu {
+.dropdown-menu {
     max-height: 80vh;
     overflow: scroll;
 }

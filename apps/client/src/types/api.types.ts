@@ -1,7 +1,13 @@
-export type Hotel = {
+export type HotelSearchResult = {
     hotelId: string
     hotelName: string
     matchScore: number
+}
+
+export type SearchResult = {
+    hotels: HotelSearchResult[]
+    cities: City[]
+    countries: Country[]
 }
 
 export type City = {
@@ -14,8 +20,17 @@ export type Country = {
     name: string
 }
 
-export type SearchResult = {
-    hotels: Hotel[]
-    cities: City[]
-    countries: Country[]
+export type Hotel = {
+    _id: string
+    hotelName: string
+    addressLine1: string
+    addressLine2?: string
+    city: string
+
+    chainName: string
+    country: string
+    countryIsoCode: string
+    starRating: number
+    state?: string
+    zipCode: string
 }

@@ -26,6 +26,10 @@ describe('<AppRouter />', () => {
               "element": <HomePage />,
               "path": "/",
             },
+            {
+              "element": <HotelPage />,
+              "path": "/hotels/:hotelId",
+            },
           ]
         `)
     })
